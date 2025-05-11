@@ -12,6 +12,8 @@ header{
     color: burlywood;
     padding: 1rem;
     text-align: center;
+   
+    
 }
 /*estilos para centrar el contenido general del main*/
 main{
@@ -31,7 +33,7 @@ table {
     border: 1px solid black;
     border-radius: 10px;
     width:60%;
-    margin: auto;
+    margin:  auto;
     background-color:#eff7df;
   }
 th,td{
