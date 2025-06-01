@@ -5,64 +5,125 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>mi portfolio</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header> <!--contenido general de header-->
+    <header> 
+      <nav>
+          <ul>
+              <li><a href="#about-me">Sobre Mí</a></li>
+              <li><a href="#habilidades">Qué Hago</a></li>
+              <li><a href="#skills">Conocimientos</a></li>
+              <li><a href="#contact">Contacto</a></li>
+              <li><a href="#projects">Proyectos</a></li>
+          </ul>
+      </nav>
+      <div class="hero-content">
          <h1>Bienvenido a mi portfolio</h1>
          <h2>¡Hola! Soy Nico</h2>
-         <p>Desarrollador de sowftware en formación</p>
+         <p>Desarrollador de software en formación</p>
+      </div>   
     </header>
 
             
     <main>
-        <div> <!--div contenedor de imagen , a modo de mejora me gustaria cambiarla por una personal-->
-          <img src="img/dev-min.jpg" alt="" class="imgperfil">
-        </div>
-          <section>
-            <!--a modo de mejor en esta seccion a fututo me gustaria añadir una card contando sobre mi-->
-          </section>
-        <section  id="table-conocimientos">
-          <h2>Conocimientos y Hobbies</h2>
-            <table>
-              <thead>
-                <tr>  
-                 <th>Tecnologias</th>
-                 <th>Tecnologias que quiero aprender</th>
-                 <th>Mis hobbies</th>
-               </tr>
-              </thead> 
-              <tbody>
-               <tr>
-                 <td>C#,Mysql,Html,Java,Kotlin </td>
-                 <td>Javascript, React , Vue , AWS</td>
-                 <td>Practicar boxeo , programar , escuchar musica </td>
-               </tr>
-              </tbody>
+
+        <section id="about-me" class="content-section">
+            <div class="about-me-container">
+                <img src="img/dev-min.jpg" alt="" class="imgperfil">
+                <div class="about-me-text">
+                    <h2>Sobre Mí</h2>
+                    <p>Hola soy nico , tengo 29 años y actualmente soy un desarrollador de software en formación, apasionado por la creación de apps. Me considero una persona proactiva, autodidacta y con gran capacidad para el trabajo en equipo.</p>
+                    <p>Actualmente, estoy profundizando mis conocimientos en el desarrollo backend con C# , así como en la gestión de bases de datos con MySQL. Siempre estoy buscando nuevos desafíos y oportunidades para expandir mis habilidades y contribuir a proyectos </p>
+                </div>
+            </div>
+        </section>
+        
+        <section id="habilidades" class="content-section">
+            <h2>Qué Hago</h2>
+            <div class="services-container">
+                <div class="service-block">
+                    <i class="fas fa-code icon-large"></i>
+                    <h3>Desarrollo Backend</h3>
+                    <p>Creación y mantenimiento de la lógica del lado del servidor, APIs y bases de datos robustas y escalables utilizando lenguajes como C# y Java.</p>
+                </div>
+                <div class="service-block">
+                    <i class="fas fa-database icon-large"></i>
+                    <h3>Gestión de Bases de Datos</h3>
+                    <p>Diseño, implementación y optimización de bases de datos relacionales, principalmente con MySQL, asegurando la integridad y eficiencia de los datos.</p>
+                </div>
+                <div class="service-block">
+                    <i class="fas fa-mobile-alt icon-large"></i>
+                    <h3>Desarrollo Móvil (Básico)</h3>
+                    <p>Experiencia inicial en el desarrollo de aplicaciones móviles con Kotlin, buscando expandir mis habilidades en este ámbito.</p>
+                </div>
+            </div>
+        </section>
+
+         <section id="skills" class="content-section">
+            <h2>Conocimientos</h2>
+            <table class="skills-table">
+                <thead>
+                    <tr>
+                        <th>Tecnologías que manejo</th>
+                        <th>Tecnologías que quiero aprender</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>C#, MySQL, HTML, Java, Kotlin</td>
+                        <td>JavaScript, React, Vue, AWS</td>
+                    </tr>
+                    <tr>
+                        <td>Git, Visual Studio Code</td>
+                        <td>Node.js, Python, Docker</td>
+                    </tr>
+                </tbody>
             </table>
         </section>
 
-        <section id="form">
-          <h2>contacto</h2>
-            <form action="">
-                <label for="fname">Nombre</label>
-                <input type="text" id="fname" name="fname">
-                <label for="apellido">Apellido</label>
-                <input type="text" id="apellido" name="apellido">
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email">
-                <label for="tel">Telefono</label>
+        <section id="contact" class="content-section">
+            <h2>Contáctame</h2>
+            <form action="#" method="POST" class="contact-form">
+                <label for="fname">Nombre:</label>
+                <input type="text" id="fname" name="fname" required>
+
+                <label for="apellido">Apellido:</label>
+                <input type="text" id="apellido" name="apellido" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="tel">Teléfono:</label>
                 <input type="number" id="tel" name="tel">
                 
-                <button type="submit">enviar</button>
+                <button type="submit">Enviar <i class="fas fa-paper-plane"></i></button>
             </form>
         </section>
-        <div>
-          <h2>ver mis redes y proyectos</h2> 
-          <p>podes ver mas sobre mis proyectos en <a href="https://github.com/nicoacp/portfolio">Github</a></p>
-        </div>
+
+        <section id="projects" class="content-section">
+            <h2>Ver mis redes y proyectos</h2>
+            <p>Puedes ver más sobre mis proyectos en: 
+                <a href="https://github.com/nicoacp" target="_blank" class="github-link">
+                    <i class="fab fa-github"></i> GitHub
+                </a>
+            </p>
+            <p>Conéctate conmigo en:
+                <a href="https://ar.linkedin.com/" target="_blank" class="linkedin-link">
+                    <i class="fab fa-linkedin"></i> LinkedIn
+                </a>
+            </p>
+        </section>
     </main>   
-    <footer>
-      <!--a modo de mejora en el footer me gustaria agregar iconos a mis redes-->
-    </footer> 
+     <footer>
+        <div class="footer-content">
+            <p>&copy; 2025 Nico. Todos los derechos reservados.</p>
+            <div class="social-icons">
+                <a href="https://github.com/nicoacp" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://ar.linkedin.com/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                </div>
+        </div>
+    </footer>
 </body>
 </html>

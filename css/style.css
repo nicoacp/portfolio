@@ -1,69 +1,403 @@
 /*estilos generales*/
 body{
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Roboto', sans-serif;
     background-color: #f2f7f7;
     margin: 0;
     padding: 0;
-    color: #4d4d4d;
+    color:#333;
+    line-height: 1.6;
 }
 
 header{
     background-color: #486944;
-    color: burlywood;
-    padding: 1rem;
+    color: #f0f0f0;;
+    padding: 1.5rem 0;
     text-align: center;
-   
+    position: relative; 
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; 
+    min-height: 25vh; 
     
 }
-/*estilos para centrar el contenido general del main*/
-main{
-    padding: 2rem;
-    margin: auto;
-    max-width: 700px;
+
+.hero-content {
+    padding: 1rem;
 }
 
-.imgperfil{ /*estilos para imagen , ancho y alto*/
-    height: 15rem;
-    width: 15rem;
-    border-radius: 50%;
-    display: block;
+
+header h1 {
+    font-size: 2.5rem; 
+    margin-bottom: 0.5rem;
 }
 
-table {
-    border: 1px solid black;
-    border-radius: 10px;
-    width:60%;
-    margin:  auto;
-    background-color:#eff7df;
-  }
-th,td{
-    text-align: center;
-    padding: 0.5rem;
-    border: 1px solid black;
+header h2 {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+}
+
+header p {
+    font-size: 1.1rem;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex; 
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 0.8rem;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #f0f0f0;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 5px 10px;
+    transition: all 0.3s ease; 
+}
+
+nav ul li a:link { 
+    color: #f0f0f0;
+}
+
+nav ul li a:visited { 
+    color: #d3d3d3; 
+}
+
+nav ul li a:hover { 
+    color: #a7d979; 
+    background-color: rgba(255, 255, 255, 0.1);
     border-radius: 5px;
 }
 
-form{
-    width: 60%;
-    margin: auto;
-    background-color:#eff7df ;
+nav ul li a:active { 
+    color: #8bbd66;
+}
+/*estilos para centrar el contenido general del main*/
+
+main{
     padding: 2rem;
-    border-radius: 20px;
-    }
-form input,form button{
-display: block;
-width: 80%;
-padding: 0.5rem;
-margin-bottom: 1rem;
-}  
-form button{ /*estilos para el boton del form*/
-    display: block;
-    width: 50%;
-    margin: auto;
+    margin: 0 auto;
+    max-width: 1200px;
+    display: flex; 
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.content-section {
+    background-color: #fff;
+    padding: 2.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+    margin-bottom: 2rem; 
+}
+
+.content-section h2 {
+    text-align: center;
+    color: #486944;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+}
+
+/*seccion sobre mi*/
+
+#about-me .about-me-container {
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    gap: 2rem;
+}
+
+#about-me .about-me-text {
+    flex: 1; 
+    text-align: center; 
+}
+
+.imgperfil{ 
+    height: 18rem;
+    width: 18rem;
+    border-radius: 50%;
+    object-fit: cover; 
+    border: 5px solid #a7d979; 
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+/*seccion que hago*/
+
+.services-container {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center; 
+    gap: 1.5rem;
+}
+
+.service-block {
+    background-color: #eff7df;
+    padding: 1.5rem;
     border-radius: 10px;
-    background-color: #eff5e4;
-    
-}  
-footer{
+    text-align: center;
+    flex: 1 1 calc(33% - 3rem);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease;
+    min-width: 280px; 
+}
+
+.service-block:hover {
+    transform: translateY(-5px); 
+}
+
+.icon-large {
+    font-size: 3rem; 
+    color: #486944;
+    margin-bottom: 1rem;
+}
+
+/*seccion mis conocimientos*/
+
+
+.skills-table {
+    border-collapse: collapse; 
+    width: 100%; 
+    margin: 0 auto; 
+    background-color: #eff7df;
+    border-radius: 10px;
+    overflow: hidden; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.skills-table th, .skills-table td {
+    text-align: center;
+    padding: 1rem;
+    border: 1px solid #dcdcdc; 
+}
+
+.skills-table thead {
     background-color: #486944;
-}  
+    
+}
+
+.skills-table tr:nth-child(even) { 
+    background-color: #e6f0d7;
+}
+
+.skills-table tr:nth-child(odd) { 
+    background-color: #f2f7f7;
+}
+
+/* formulario*/
+.contact-form {
+    width: 80%; 
+    margin: 0 auto; 
+    background-color: #eff7df;
+    padding: 2.5rem;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form label {
+    display: block; 
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: #486944;
+}
+
+.contact-form input,
+.contact-form button {
+    display: block; 
+    width: calc(100% - 1.5rem); 
+    padding: 0.8rem;
+    margin-bottom: 1.2rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+.contact-form button {
+    width: auto; 
+    margin: 1rem auto 0; 
+    background-color: #486944;
+    color: #fff;
+    cursor: pointer;
+    border: none;
+    padding: 0.8rem 2rem;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease;
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.contact-form button:hover {
+    background-color: #3a5337;
+}
+
+/* seccion proyectos */
+#projects p {
+    text-align: center;
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+}
+
+.github-link, .linkedin-link {
+    color: #486944;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.github-link:hover, .linkedin-link:hover {
+    color: #3a5337;
+}
+
+.github-link i, .linkedin-link i {
+    margin-right: 0.5rem;
+}
+
+/* -------FOOTER ------*/
+footer {
+    background-color: #486944;
+    color: #f0f0f0;
+    text-align: center;
+    padding: 1.5rem 0;
+    margin-top: 3rem;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.social-icons a {
+    color: #f0f0f0;
+    font-size: 1.8rem;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #a7d979;
+}
+
+/* responsive */
+@media (max-width: 1080px) { 
+    main {
+        padding: 1.5rem;
+    }
+    .service-block {
+        flex: 1 1 calc(50% - 3rem); 
+    }
+    #about-me .about-me-container {
+        flex-direction: column; 
+    }
+    #about-me .about-me-text {
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) { 
+    header h1 {
+        font-size: 2rem;
+    }
+    header h2 {
+        font-size: 1.5rem;
+    }
+    nav ul {
+        flex-direction: column; 
+        gap: 10px;
+    }
+    nav ul li {
+        margin: 0;
+    }
+    .content-section {
+        padding: 2rem;
+    }
+    .service-block {
+        flex: 1 1 100%; 
+    }
+    .contact-form {
+        width: 90%;
+    }
+    .skills-table th, .skills-table td {
+        padding: 0.8rem;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) { 
+    header {
+        padding: 1rem 0;
+    }
+    header h1 {
+        font-size: 1.8rem;
+    }
+    header h2 {
+        font-size: 1.3rem;
+    }
+    main {
+        padding: 1rem;
+    }
+    .content-section {
+        padding: 1.5rem;
+    }
+    .imgperfil {
+        height: 12rem;
+        width: 12rem;
+    }
+    .skills-table th, .skills-table td {
+        padding: 0.6rem;
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 375px) { 
+    header h1 {
+        font-size: 1.5rem;
+    }
+    header h2 {
+        font-size: 1.1rem;
+    }
+    nav ul li a {
+        font-size: 0.9rem;
+    }
+    .icon-large {
+        font-size: 2.5rem;
+    }
+}
+
+
+.content-section p {
+    margin-bottom: 1rem;
+    font-size: 1.05rem;
+    color: #555;
+}
+
+
+.footer-content > .social-icons a {
+    opacity: 0.9; 
+}
+
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+
+.service-block h3 {
+    margin-top: 0.5rem;
+    margin-bottom: 0.8rem;
+}
